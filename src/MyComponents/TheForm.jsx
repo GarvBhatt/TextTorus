@@ -5,6 +5,11 @@ import {Form,Button} from "react-bootstrap";
 const TheForm = (props)=>
 {
     const [text,setText] = useState("");
+    const handleOnClickForListenText = (e)=>
+    {
+        var msg = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(msg);
+    }
     const handleOnClickForUpperCase = (e)=>
     {
         setText(text.toUpperCase());
@@ -44,8 +49,9 @@ const TheForm = (props)=>
                 <Form.Control className="my-3" value={text} placeholder="Enter text" onChange={handleOnChange} as="textarea" rows={7}/>
                 <Button className="me-3" onClick={handleOnClickForUpperCase} variant="success">UpperCase</Button>
                 <Button className="me-3" onClick={handleOnClickForLowerCase}  variant="success">LowerCase</Button>
-                <Button className="me-3" onClick={handleOnClickForCls}  variant="success">Cls</Button>
+                <Button className="me-3" onClick={handleOnClickForListenText} variant="success">ListenText</Button>
                 <Button className="me-3" onClick={handleOnClickForCopyToClipBoard} variant="success">ClipBoard</Button>
+                <Button className="me-3" onClick={handleOnClickForCls}  variant="success">Cls</Button>
             </Form>
 
             <div className="information">
