@@ -13,7 +13,7 @@ const Header = (props)=>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <Nav.Link style={props.TextStyle} href="#">Home</Nav.Link>
+                        <a style={props.TextStyle} href="#">Home</a>
                     </Nav>
                     <div style={{position:"relative", left:"61em"}}>
                         <Form.Check
