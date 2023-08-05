@@ -7,14 +7,13 @@ const Header = (props)=>
         <div style={props.backgroundStyle}>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand style={props.TextStyle} href="/">
+                    <Navbar.Brand style={props.TextStyle} href="#">
                         {props.title}
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <Nav.Link style={props.TextStyle} href="/">Home</Nav.Link>
-                        <Nav.Link style={props.TextStyle} href="/">About</Nav.Link>
+                        <Nav.Link style={props.TextStyle} href="#">Home</Nav.Link>
                     </Nav>
                     <div style={{position:"relative", left:"61em"}}>
                         <Form.Check

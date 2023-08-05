@@ -6,7 +6,7 @@ import Alert from "./MyComponents/Alert";
 function App() {
   const [mode, setmode] = useState(!true);
   const [TheAlert, setTheAlert] = useState();
-  // uhj
+
   const showTheAlert = (TheAlertAsParametre)=>
   {
     setTheAlert(TheAlertAsParametre);
