@@ -3,6 +3,13 @@ import { Container, Navbar, Nav, Form } from "react-bootstrap";
 
 const Header = (props)=>
 {
+    const atagStyle = 
+    {
+        textDecoration: "none",
+        fontSize:"17px",
+        margin:"3px 25px 0px 5px",
+        color: props.TextStyle.color
+    }
     return (
         <div style={props.backgroundStyle}>
             <Navbar expand="lg">
@@ -13,7 +20,7 @@ const Header = (props)=>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <a style={props.TextStyle} href="#">Home</a>
+                        <a style={atagStyle} href="#">Home</a>
                     </Nav>
                     <div style={{position:"relative", left:"61em"}}>
                         <Form.Check
