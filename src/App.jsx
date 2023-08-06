@@ -15,9 +15,11 @@ function App() {
         setTheAlert("");
     },2500);
   }
+
   document.body.style.backgroundColor=(mode)?"#042743":"white";
 
   const getmode = (currMode)=> (currMode)?"#272727":"white";
+
   const TextStyle = 
   {
     color:getmode(!mode)
