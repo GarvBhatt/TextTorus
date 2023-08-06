@@ -43,7 +43,7 @@ const TheForm = (props)=>
     return (
         <Container style={props.TextStyle}>
             <Form>
-                <Form.Label className="h2 mt-5">
+                <Form.Label className="h3 mt-5">
                     Enter Text
                 </Form.Label>
                 <Form.Control className="my-3" value={text} placeholder="Enter text" onChange={handleOnChange} as="textarea" rows={7}/>
@@ -56,9 +56,9 @@ const TheForm = (props)=>
             </Form>
 
             <div className="information">
-                <h1>
-                    Preview
-                </h1>
+                <h2>
+                    Preview of text : 
+                </h2>
                 <p>
                     {
                         (text)?text:"No text"
