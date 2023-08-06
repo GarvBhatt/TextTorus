@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TextTorus/static/css/main.30dd5119.css",
-    "main.js": "/TextTorus/static/js/main.83f962fb.js",
+    "main.js": "/TextTorus/static/js/main.09ecfb74.js",
     "static/js/787.37c08559.chunk.js": "/TextTorus/static/js/787.37c08559.chunk.js",
     "index.html": "/TextTorus/index.html",
     "main.30dd5119.css.map": "/TextTorus/static/css/main.30dd5119.css.map",
-    "main.83f962fb.js.map": "/TextTorus/static/js/main.83f962fb.js.map",
+    "main.09ecfb74.js.map": "/TextTorus/static/js/main.09ecfb74.js.map",
     "787.37c08559.chunk.js.map": "/TextTorus/static/js/787.37c08559.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30dd5119.css",
-    "static/js/main.83f962fb.js"
+    "static/js/main.09ecfb74.js"
   ]
 }
