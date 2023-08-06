@@ -14,15 +14,18 @@ const Header = (props)=>
         <div style={props.backgroundStyle}>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand style={props.TextStyle} href="#">
+                    <Navbar.Brand style={props.TextStyle} to="#">
                         {props.title}
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <a style={atagStyle} href="#">Home</a>
+                        <Nav.Link style={atagStyle} to="#">Home</Nav.Link>
                     </Nav>
-                    <div style={{position:"relative", left:"61em"}}>
+                    <Nav>
+                        <pre>                                                                                                                         </pre>
+                    </Nav>
+                    <div style={{position:"relative"}}>
                         <Form.Check
                             type="switch"
                             style={props.TextStyle}
