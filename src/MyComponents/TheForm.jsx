@@ -27,8 +27,8 @@ const TheForm = (props)=>
     }
     const handleOnClickForRemoveExtraSpaces = ()=>
     {
-        setText(text.toString().trim());
-        props.showTheAlert("Text copied to clipboard");
+        setText(text.split(/\s+/).join(" "));
+        props.showTheAlert("Extra spaces removed");
     }
     const handleOnClickForCopyToClipBoard = ()=>
     {
@@ -64,7 +64,7 @@ const TheForm = (props)=>
                         (text)?text:"No text"
                     }
                 </p>
-                <p>Your text has {text.length} letters and {text.trim().split(/\s+/).filter((word) => word !== "").length} words</p>
+                <p>Your text has {text.length} letters and {text.split(/\s+/).filter((word) => word !== "").length} words</p>
             </div>
         </Container>
     )
