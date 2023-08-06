@@ -25,14 +25,14 @@ const TheForm = (props)=>
         setText("");
         props.showTheAlert("Text cleared");
     }
+    const handleOnClickForRemoveExtraSpaces = ()=>
+    {
+        setText(text.toString().trim());
+        props.showTheAlert("Text copied to clipboard");
+    }
     const handleOnClickForCopyToClipBoard = ()=>
     {
-        const divi=document.createElement("textarea");
-        divi.value = text.toString();
-        document.body.appendChild(divi);
-        divi.select();
-        document.execCommand("copy");
-        document.body.removeChild(divi);
+        navigator.clipboard.writeText(text);
         props.showTheAlert("Text copied to clipboard");
     }
     const handleOnChange = (e) =>
@@ -47,11 +47,12 @@ const TheForm = (props)=>
                     Enter Text
                 </Form.Label>
                 <Form.Control className="my-3" value={text} placeholder="Enter text" onChange={handleOnChange} as="textarea" rows={7}/>
-                <Button className="me-3" onClick={handleOnClickForUpperCase} variant="success">UpperCase</Button>
-                <Button className="me-3" onClick={handleOnClickForLowerCase}  variant="success">LowerCase</Button>
-                <Button className="me-3" onClick={handleOnClickForListenText} variant="success">ListenText</Button>
-                <Button className="me-3" onClick={handleOnClickForCopyToClipBoard} variant="success">ClipBoard</Button>
-                <Button className="me-3" onClick={handleOnClickForCls}  variant="success">Cls</Button>
+                <Button disabled={!text} className="me-2 my-1" onClick={handleOnClickForUpperCase} variant="success">UpperCase</Button>
+                <Button disabled={!text} className="me-2 my-1" onClick={handleOnClickForLowerCase}  variant="success">LowerCase</Button>
+                <Button disabled={!text} className="me-2 my-1" onClick={handleOnClickForListenText} variant="success">ListenText</Button>
+                <Button disabled={!text} className="me-2 my-1" onClick={handleOnClickForCopyToClipBoard} variant="success">ClipBoard</Button>
+                <Button disabled={!text} className="me-2 my-1" onClick={handleOnClickForRemoveExtraSpaces} variant="success">RemoveExtraSpaces</Button>
+                <Button disabled={!text} className="me-2 my-1" onClick={handleOnClickForCls}  variant="success">Cls</Button>
             </Form>
 
             <div className="information">
@@ -63,7 +64,7 @@ const TheForm = (props)=>
                         (text)?text:"No text"
                     }
                 </p>
-                <p>Your text has {text.length} letters and {(text.charAt(text.length-1)===' ' || text.length===0)?text.split(" ").length-1:text.split(" ").length} words</p>
+                <p>Your text has {text.length} letters and {text.trim().split(/\s+/).filter((word) => word !== "").length} words</p>
             </div>
         </Container>
     )
